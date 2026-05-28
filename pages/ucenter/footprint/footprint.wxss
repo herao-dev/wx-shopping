@@ -1,0 +1,52 @@
+page {
+  background: #f4f4f4;
+  min-height: 100%;
+}
+
+.container {
+  background: #f4f4f4;
+  min-height: 100%;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+.footprint{
+    background-color: white;
+}
+.no-footprint {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+.rq{
+    padding-top: 20px;
+    padding-left: 15px;
+    padding-bottom: 15px;
+    border-bottom:1px solid rgb(189, 182, 182);
+    background-color: rgb(243, 243, 243);
+}
+.sp{
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+    border-bottom:1px solid rgb(189, 182, 182);
+    padding: 20px 0;
+}
+.sp image{
+    height: 100px;
+    width: 100px;
+    margin: 0 0px;
+}
+.sp view{
+    margin-left: 10px;
+}
+.deleteAll{
+    position: fixed;
+    bottom: 5%;
+    left: 120px;
+    text-align: center;
+    padding: 10px 30px;
+    border-radius: 50px;
+    color: white;
+    background-color: rgb(14, 196, 228);
+}

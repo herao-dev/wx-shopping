@@ -1,0 +1,26 @@
+<view class="add-address">
+  <view class="add-form">
+    <input type="text" model:value="{{receivingName}}" class="form-item"/>
+    <input type="number" model:value="{{phone}}" class="form-item"/>
+    <input type="text" model:value="{{address}}" class="form-item"/>
+    <input type="text" model:value="{{addressDetails}}" class="form-item"/>
+  </view>
+
+  <view class="btns">
+    <view>
+        <image src="/static/images/hxm_yanxuan-wap_p_20150730_style_img_icon-normal_checkbox-0e09baa37e.png" />
+        <image src="/static/images/hxm_yanxuan-wap_p_20150730_style_img_icon-normal_checkbox-checked-822e54472a.png" wx:if="{{}}"/>
+    </view>
+    <view>设为默认地址</view>
+
+    <view class="anniu">
+        <view class="aj" style="background-color: rgb(31, 28, 28);">取消</view>
+        <view class="aj" style="background-color: rgb(180, 8, 8);" bind:tap="saveAddress">保存</view>
+    </view>
+  </view>
+
+  <view class="region-select" wx:if="{{!openSelectRegion}}">
+    
+  </view>
+</view>
+<view class="bg-mask"></view>

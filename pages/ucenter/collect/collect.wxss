@@ -1,0 +1,39 @@
+page {
+  background: #f4f4f4;
+  min-height: 100%;
+}
+
+.container {
+  background: #f4f4f4;
+  min-height: 100%;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.no-collect {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  background-color: white;
+}
+.collect{
+    display: flex;
+    border-bottom:1px solid rgb(204, 194, 194);
+    background-color: white;
+    padding:  15px 0;
+    margin-left: 20px;
+    align-items: center;
+}
+.collect image{
+    width: 100px;
+    height: 100px;
+}
+.text{
+    margin-left: 10px;
+}
+.text view{
+    padding: 5px;
+}
+
+

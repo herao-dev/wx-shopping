@@ -1,0 +1,14 @@
+<scroll-view class="container" style="height: 100%;">
+  <view class="search-header">
+    
+  </view>
+
+  <view class="search-result">
+   
+    
+  </view>
+
+  <view class="search-result-empty">
+    
+  </view>
+</scroll-view>

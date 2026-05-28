@@ -1,0 +1,25 @@
+<view class="container">
+  <!-- 导航 -->
+  <view  class="cate" >
+     <view class="cate-nav" wx:for="{{CatalogList}}" >
+        <view  class="nav-1 {{cateid==item.id  ?  'active' : '' }}" bind:tap="switchCate" data-id="{{item.id}}" data-text="{{item.categoryName}}">
+         {{item.categoryName}}
+        </view>
+     </view>
+  </view>
+
+  <!-- 商品列表 -->
+  <scroll-view scroll-y="true">
+    <view class="" >
+        <view class="cate-text" >
+            {{text}}</view>
+        <view class="cate-box">
+        <view wx:for="{{GoodsList}}" class="cate-1" data-id="{{item.id}}" bind:tap="goGoods">
+                <image src="{{imgApi+item.mainImg}}"/>
+                <view >{{item.name}}</view>
+                <view class="cate-jg">￥{{item.price}}</view>
+        </view>
+    </view>
+    </view>
+  </scroll-view>
+</view>

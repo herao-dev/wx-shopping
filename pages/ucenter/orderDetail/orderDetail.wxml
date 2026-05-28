@@ -1,0 +1,69 @@
+<view class="container">
+  <!-- 订单信息 -->
+  <view class="order-info">
+    
+  </view>
+  <!-- 商品信息 -->
+  <view class="order-goods">
+    <view class="h">
+      <view>
+        下单时间：{{OrderList.master[0].createTimes}}
+      </view>
+      <view>
+        订单编号：{{OrderList.master[0].orderNum}}
+      </view>
+      <view class="jg">
+        实付： <view style="color: #b4282d;"> ￥{{OrderList.master[0].totalPrice}}</view>
+        <button type="warn" class="scdd" bind:tap="deleteOrder">删除订单</button>
+      </view>
+    </view>
+    <view class="goods">
+    <view wx:for="{{OrderList.master}}" wx:for-index="a">
+        <view class="ztl">
+            <view>商品信息</view>
+            <view wx:if="{{item.orderFlag==0}}" class="zt">待付款</view>
+            <view wx:if="{{item.orderFlag==1}}" class="zt">待发货</view>
+            <view wx:if="{{item.orderFlag==2}}" class="zt">待收货</view>
+        </view>
+        <view wx:for="{{item.orderSlavesList}}" class="spxq"  data-id="{{OrderList.master[a].receivingGoodsId}}">
+            <image src="{{imgApi+item.mainImg}}"/>
+            <view class="xq">
+                <view class="name-number">
+                    <view style="font-size: 18px;">{{item.name}}</view>
+                    <view style="font-size: 18px;">×{{item.number}}</view>
+                </view> 
+                <view style="font-size: 18px;">￥{{item.price}}</view>
+            </view>
+        </view>
+    </view>
+    </view>
+
+    <view class="order-bottom">
+      <view style="color: rgb(202, 14, 14);">实付： ￥{{OrderList.master[0].totalPrice}}</view>
+    </view>
+  </view>
+
+  <!-- 物流信息,仅收货状态下可见 -->
+  <view class="order-express" wx:if="{{OrderList.master[0].orderFlag==1}}">
+    <view class="wlxx-1">
+        <view class="name-phone">
+            <view>{{OrderList.master[0].receivingName}}</view>
+            <view>{{OrderList.master[0].phone}}</view>
+        </view>
+        {{OrderList.master[0].address}}
+    </view>
+  </view>
+
+  <view class="payWrapper" wx:if="{{OrderList.master[0].orderFlag==1}}">
+    <view style="display: flex;">
+        <view>
+            <view>商品合计：</view>
+            <view>运费：</view>
+        </view>
+        <view>
+            <view> ￥{{OrderList.master[0].totalPrice}}</view>
+            <view> ￥0</view>
+        </view>
+    </view>
+  </view>
+</view>

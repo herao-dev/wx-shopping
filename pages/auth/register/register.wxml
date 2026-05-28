@@ -1,0 +1,27 @@
+<view class="container">
+  <view class="form-box">
+
+    <view class="form-item">
+      <input class="username" placeholder="用户名" auto-focus model:value="{{username}}"/>
+      <image id="clear-username" class="clear" src="/static/images/clear_input.png"></image>
+    </view>
+
+    <view class="form-item">
+      <input class="password" model:value="{{password}}" password placeholder="密码" />
+      <image class="clear" id="clear-password" src="/static/images/clear_input.png"></image>
+    </view>
+
+    <view class="form-item">
+      <input class="password" model:value="{{confirmPassword}}" password placeholder="确认密码" />
+      <image class="clear" id="clear-confirm-password" src="/static/images/clear_input.png"></image>
+    </view>
+
+    <view class="form-item">
+      <input class="mobile" model:value="{{mobile}}" placeholder="手机号" />
+      <image id="clear-mobile" class="clear" src="/static/images/clear_input.png"></image>
+    </view>
+
+    <button type="primary" class="register-btn" bind:tap="startRegister">注册</button>
+
+  </view>
+</view>

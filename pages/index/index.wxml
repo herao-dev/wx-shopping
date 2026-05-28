@@ -1,0 +1,41 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- 首页搜索 -->
+  <view class="search">
+    <input class="search-input" placeholder="🔍商品搜索" />
+  </view>
+  <!-- 广告轮播 -->
+  <swiper class="banner" indicator-dots="{{true}}" autoplay="{{true}}" 	interval="2000">
+    <swiper-item wx:for="{{img}}" >
+        <image src="{{imgApi+item.imgUrl}}"/>
+    </swiper-item>
+  </swiper>
+  <!-- 首页分类 -->
+  <view class="m-menu">
+        <view wx:for="{{homeimg}}" class="m-menu1" bind:tap="go" data-id="{{item.id}}" data-name="{{item.categoryName}}">
+            <image src="{{imgApi+item.categoryImg}}"/>
+            {{item.categoryName}}
+        </view>
+  </view>
+  <!-- 新品首发 -->
+  <view class="a-section a-new">
+    <p class="a-new1">周一周四·新品首发</p>
+    <view wx:for="{{HomeNewGoods.FirstEpisode}}" class="a-new2" bind:tap="goto" data-spid="{{item.id}}" data-spname="{{item.name}}">
+            <image src="{{imgApi+item.mainImg}}"/>
+            {{item.name}}
+            <view class="a-new3">￥{{item.price}}</view>
+    </view>
+  </view>
+  <!-- 人气推荐 -->
+  <view class="a-section a-popular">
+    <p  >人气推荐</p>
+    <view class="a-popular3">
+        <view wx:for="{{HomeNewGoods.Recommend}}" class="a-popular1">
+                <image src="{{imgApi+item.mainImg}}"/>
+                <view class="a-popular2">
+                <view>{{item.name}}</view>
+                ￥{{item.price}}</view>
+        </view>
+    </view>
+  </view>
+</view>

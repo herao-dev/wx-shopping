@@ -1,0 +1,119 @@
+page {
+  height: 100%;
+  width: 100%;
+  background: #f4f4f4;
+}
+.dfh{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    color: white;
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+    position: absolute;
+    left: 200px;
+    top: 210px;
+}
+.dfk{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    color: white;
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+    position: absolute;
+    left: 90px;
+    top: 210px;
+}
+.dsh{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    color: white;
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+    position: absolute;
+    left: 330px;
+    top: 210px;
+}
+.container {
+  background: #f4f4f4;
+  height: auto;
+  overflow: hidden;
+  width: 100%;
+}
+.profile-info{
+    background-color: rgb(19, 182, 223);
+    height: 150px;
+    display: flex;
+    align-items: center;
+}
+.profile-info image{
+    width: 100px;
+    height: 100px;
+    border-radius: 60px;
+    margin: 20px;
+}
+.profile-info view{
+    color: white;
+    font-size: 20px;
+    margin: 20px;
+}
+.user_area{
+    background-color: white;
+    border-bottom: 1px solid rgb(207, 200, 200);
+}
+.dd-img{
+    height: 22px;
+    width: 22px;
+    position: absolute;
+    right: 0;
+    margin: 20px;
+}
+.dd-text{
+    font-weight: 600;
+    padding: 20px;
+}
+.dd-xx{
+    display: flex;
+    justify-content: space-between;
+    padding:10px 50px;
+}
+.dd-xx image{
+    height: 40px;
+    width: 40px;
+}
+.user_row_left{
+    padding: 20px;
+    font-weight: 600;
+}
+.user_column{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding:20px 50px;
+    border-bottom: 1px solid rgb(207, 200, 200);
+}
+.user_column image{
+    height: 35px;
+    width: 35px;
+}
+.user_column_item{
+    text-align: center;
+}
+.logout{
+  text-align: center;
+  align-items: center;
+  border-radius:2em;
+  background-color: rgb(22, 176, 236);
+  color:white;
+  font-size: 18px;
+  margin: 18px 120px;
+  padding: 10px ;
+}

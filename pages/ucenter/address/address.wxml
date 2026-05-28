@@ -1,0 +1,18 @@
+<view class="container">
+  <view class="address-list">
+    <view wx:for="{{AddressList}}" class="xinxi" >
+        <view class="xinxi-1" bind:tap="goaddressAdd" data-name="编辑地址" data-id="{{item.id}}">
+            <view class="xinxi-id">{{item.receivingName}}</view>
+            <view>
+                <view >{{item.phone}}</view>
+                <view style="width: 200px;">{{item.address}}{{item.addressDetails}}</view>
+            </view>
+        </view>
+        <image src="/static/images/del-address.png" data-id="{{item.id}}" bind:tap="deleteAddress" />
+    </view>
+  </view>
+  <view class="empty-view">
+    
+  </view>
+  <view class="add-address" data-address-id="0" bind:tap="goaddressAdd" data-name="新建地址">新建</view>
+</view>

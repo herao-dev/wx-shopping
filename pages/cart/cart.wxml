@@ -1,0 +1,62 @@
+<view class="container">
+  <!-- 未登录时显示去登录按钮 -->
+  <view class="no-login" wx:if="{{wx.getStorageSync('userId')}}">
+    <button type="primary">去登陆</button>
+  </view>
+  <view class='login' wx:else>
+    <!-- 没有商品时显示去添加 -->
+    <view class="no-cart" wx:if="{{CartList.cartGoods.length <= 0}}">
+      
+    </view>
+    
+    <!-- 购物车列表 -->
+    <view class="cart-view" wx:else>
+      <view class="list">
+      <view class="gg">
+        <view>⭕30天无忧退货</view>
+        <view>⭕48小时快速退款</view>
+        <view>⭕满88元免邮费</view>
+      </view>
+        <view wx:for="{{CartList.cartGoods}}" class="list-1"  data-id="{{item.productId}}">
+            <view class="active" bind:tap="checkedItem" data-id="{{item.cartId}}" data-productid="{{item.productId}}" data-status="{{item.status}}" >
+                <image src="/static/images/hxm_yanxuan-wap_p_20150730_style_img_icon-normal_checkbox-0e09baa37e.png" />
+                <image src="/static/images/hxm_yanxuan-wap_p_20150730_style_img_icon-normal_checkbox-checked-822e54472a.png" class="xuan" wx:if="{{item.status==1}}"/>
+            </view>
+            <image src="{{imgApi+item.mainImg}}" bind:tap="goGoods" data-id="{{item.productId}}"/>
+            <view class="xq">
+                <view class="name-number" >
+                    <view style="font-size: 18px;" wx:if="{{bianji==0}}">{{item.productName}}</view>
+                    <view style="font-size: 18px;" wx:if="{{bianji==0}}">×{{item.number}}</view>
+                    <view style="color: gray; text-align: right;width: 230px;" wx:if="{{bianji==1}}">已选择></view>
+                </view> 
+                
+                <view style="font-size: 18px; display: flex;justify-content: space-between;align-items: center;">￥{{item.productPrice}}
+                    <view class="slk" wx:if="{{bianji==1}}">
+                        <view bind:tap="cutNumber" data-id="{{item.cartId}}" data-index="{{index}}">-</view>
+                        <input value="{{item.number}}"/>
+                        <view bind:tap="addNumber" data-id="{{item.cartId}}" data-index="{{index}}">+</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+      </view>
+      <!-- 购物车底部 -->
+      <view class="cart-bottom">
+        <view class="active" bind:tap="checkedAll" >
+                <image src="/static/images/hxm_yanxuan-wap_p_20150730_style_img_icon-normal_checkbox-0e09baa37e.png" />
+                <image src="/static/images/hxm_yanxuan-wap_p_20150730_style_img_icon-normal_checkbox-checked-822e54472a.png" class="xuan" wx:if="{{isChecked==0}}"/> 
+            </view>
+            <view>
+             全选（{{CartList.cartTotal.checkedGoodsCount}}） 
+            </view>
+            <view style="margin-right: 45px;">
+             ￥{{CartList.cartTotal.checkedGoodsAmount}}
+            </view>
+            <button type="primary" style="background-color: rgb(28, 154, 177);" wx:if="{{bianji==0}}" bind:tap="bianji">编辑</button>
+            <button type="primary" style="background-color: rgb(28, 154, 177);" wx:if="{{bianji==1}}" bind:tap="bianji">完成</button>
+            <button type="warn" wx:if="{{bianji==0}}">下单</button>
+            <button type="warn" wx:if="{{bianji==1}}" bind:tap="deleteCart">删除</button>
+      </view>
+    </view>
+  </view>
+</view>

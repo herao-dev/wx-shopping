@@ -1,0 +1,21 @@
+<view class="container">
+    <view class="form-box">
+
+    	<view class="form-item">
+    		<input class="username" placeholder="账号" model:value="{{nickname}}" />
+    		<image id="clear-username" class="clear" src="/static/images/clear_input.png"></image>
+    	</view>
+
+    	<view class="form-item">
+    		<input class="password" password placeholder="密码" model:value="{{pswd}}"/>
+    		<image class="clear" id="clear-password" src="/static/images/clear_input.png"></image>
+    	</view>
+
+    <button type="primary" class="login-btn" bind:tap="accountLogin">账号登录</button>
+
+     <view class="form-item-text">
+      <view class="register" bind:tap="goregister">注册账号</view>
+			<view class="reset">忘记密码</view>
+    </view> 
+    </view>
+</view>

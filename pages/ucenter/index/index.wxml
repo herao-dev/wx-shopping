@@ -1,0 +1,59 @@
+<view class="container">
+  <!-- 头像和昵称 -->
+  <view class="profile-info" >
+    <image src="/static/images/avatar.png" />
+    <view bind:tap="goLogin">{{nickname}}</view>
+  </view>
+
+  <view class='separate'></view>
+  <!-- 我的订单 -->
+  <view class='user_area' >
+    <view>
+        <image src="/static/images/goright.png" class="dd-img" bind:tap="goOrder" data-orderflag="-2"/>
+        <view class="dd-text">我的订单</view>
+        <view class="dd-xx">
+            <view class="user_column_item" bind:tap="goOrder" data-orderflag="0">
+                <image src="/static/images/pendpay.png"/>
+                <view>待付款</view>
+                <view class="dfk">{{OrderState.unpaid}}</view>
+            </view>
+            <view class="user_column_item" bind:tap="goOrder" data-orderflag="1">
+                <image src="/static/images/send.png"/>
+                <view>待发货</view>
+                <view class="dfh">{{OrderState.unship}}</view>
+            </view>
+            <view class="user_column_item" bind:tap="goOrder" data-orderflag="2">
+                <image src="/static/images/receive.png"/>
+                <view>待收货</view>
+                <view class="dsh">{{OrderState.unrecv}}</view>
+            </view>
+        </view>
+    </view>
+  </view>
+
+  <view class='separate'></view>
+
+  <view class='user_row'>
+    <view class='user_row_left'>核心服务</view>
+  </view>
+  <view class='user_column'>
+    <!-- 商品收藏 -->
+    <view class='user_column_item' bind:tap="goCollect">
+        <image src="/static/images/icon_collect.png"/>
+        <view>商品收藏</view>
+    </view>
+    <!-- 浏览足迹 -->
+    <view class='user_column_item' bind:tap="goFootprint">
+        <image src="/static/images/footprint.png"/>
+        <view>浏览足迹</view>
+    </view>
+    <!-- 地址管理 -->
+    <view class='user_column_item' bind:tap="goAddress">
+        <image src="/static/images/address.png"/>
+        <view>地址管理</view>
+    </view>
+  </view>
+  <view class='separate'></view>
+
+  <view class="logout" bind:tap="exitLogin">退出登录</view>
+</view>

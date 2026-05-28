@@ -1,0 +1,22 @@
+<view class="container">
+  <!-- 收货地址 -->
+  <view class="address-box">
+    
+  </view>
+
+  <view class="order-box">
+    
+  </view>
+
+  <view class="goods-items">
+    
+  </view>
+
+  <view class="order-total">
+  
+  </view>
+  <!-- 确认支付 -->
+  <view class="payWrapper">
+    
+  </view>
+</view>

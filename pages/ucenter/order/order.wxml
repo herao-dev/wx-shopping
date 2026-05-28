@@ -1,0 +1,34 @@
+<view class="container">
+  <!-- 订单状态导航 -->
+  <view class="orders-switch">
+   <view class="dh">
+    <view class="xx {{orderFlag==-2  ?  'active' : '' }}" bind:tap="switchTab" data-orderflag="{{-2}}">全部</view>
+    <view class="xx {{orderFlag==0  ?  'active' : '' }}" bind:tap="switchTab" data-orderflag="0">待付款</view>
+    <view class="xx {{orderFlag==1  ?  'active' : '' }}" bind:tap="switchTab" data-orderflag="1">待发货</view>
+    <view class="xx {{orderFlag==2  ?  'active' : '' }}" bind:tap="switchTab" data-orderflag="2">待收货</view>
+   </view>
+  </view>
+  <!-- 还没有订单 -->
+  <view class="no-order">
+    
+  </view>
+  <!-- 订单信息 -->
+  <view class="orders">
+    <view  wx:for="{{OrderList}}">
+        <view wx:for="{{OrderList.master}}" class="box" bind:tap="goOrderDetail" data-ordernum="{{item.orderNum}}">
+            <view class="ddbh">订单编号：{{item.orderNum}} <view wx:if="{{item.orderFlag==0}}" class="zt">待付款</view>
+            <view wx:if="{{item.orderFlag==1}}" class="zt">待发货</view>
+            <view wx:if="{{item.orderFlag==2}}" class="zt">待收货</view>
+            </view>
+            <view wx:for="{{item.orderSlavesList}}" class="sp" >
+                 <image src="{{imgApi+item.mainImg}}"/>
+                <view>
+                    <view style="font-size: 18px;font-weight: 600;">{{item.name}}</view>
+                    <view>共{{item.number}}件商品</view>
+                </view>
+            </view>
+            <view class="jg">实付：￥{{item.totalPrice}}</view>
+        </view>
+    </view>
+  </view>
+</view>

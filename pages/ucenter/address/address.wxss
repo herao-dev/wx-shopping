@@ -1,0 +1,47 @@
+page {
+  height: 100%;
+  width: 100%;
+  background: #f4f4f4;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+}
+
+.address-list {
+  padding-left: 31.25rpx;
+  background: #fff url(http://yanxuan.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/icon-normal/address-bg-bd30f2bfeb.png) 0 0 repeat-x;
+  background-size: auto 10.5rpx;
+  margin-bottom: 90rpx;
+}
+.address-list image{
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+.xinxi{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10px;
+    border-bottom: 1px solid rgb(223, 201, 201);
+    align-items: center;
+    padding: 25px 0;
+}
+.xinxi-1{
+    display: flex;
+    height: 45px;
+}
+.xinxi-id{
+    font-size: 18px;
+    width: 60px;
+}
+.add-address{
+    position: fixed;
+    bottom: 30px;
+    padding: 10px 150px;
+    background-color: rgb(22, 182, 223);
+    color: white;
+    left: 30px;
+    border-radius: 20px;
+}

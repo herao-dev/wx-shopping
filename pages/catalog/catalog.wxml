@@ -1,0 +1,24 @@
+<view class="container">
+  <!-- 顶部搜索 -->
+  <view class="search">
+    <input class="search-input" placeholder="🔍商品搜索" />
+  </view>
+  <view class="catalog">
+    <!-- 一级分类 -->
+    <view style="width: 120px;">
+        <view wx:for="{{CatalogList1}}" class="catalog-1 {{cateid==item.id  ?  'active' : '' }}" data-id="{{item.id}}" bind:tap="switchCate" data-name="{{item.categoryName}}">
+            {{item.categoryName}}
+        </view>
+    </view>
+    <!-- 二级分类 -->
+    <view>
+    <view class="text">-----{{name}}分类-----</view>
+        <view class="nr">
+            <view wx:for="{{CatalogList2}}" class="box" bind:tap="goGoods" data-id="{{item.fatherId}}" data-cateid="{{item.id}}">
+                <image src="{{imgApi+item.categoryImg}}"       class="img"/>
+                {{item.categoryName}}
+            </view>
+         </view>
+    </view>
+  </view>
+</view>

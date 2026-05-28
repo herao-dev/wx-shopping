@@ -1,0 +1,140 @@
+page {
+  height: 100%;
+  width: 100%;
+  background: #f4f4f4;
+}
+
+.order-info {
+  padding-top: 25rpx;
+  background: #fff;
+  height: auto;
+  overflow: hidden;
+}
+
+.item-a {
+  padding-left: 31.25rpx;
+  height: 42.5rpx;
+  padding-bottom: 12.5rpx;
+  line-height: 30rpx;
+  font-size: 30rpx;
+  color: #666;
+}
+
+.item-b {
+  padding-left: 31.25rpx;
+  height: 29rpx;
+  line-height: 29rpx;
+  margin-top: 12.5rpx;
+  margin-bottom: 41.5rpx;
+  font-size: 30rpx;
+  color: #666;
+}
+
+.item-c {
+  margin-left: 31.25rpx;
+  border-top: 1px solid #f4f4f4;
+  height: 103rpx;
+  line-height: 103rpx;
+}
+
+.item-c .l {
+  float: left;
+}
+
+.item-c .r {
+  height: 103rpx;
+  float: right;
+  display: flex;
+  align-items: center;
+  padding-right: 16rpx;
+}
+
+.item-c .r .btn {
+  float: right;
+}
+
+.item-c .cost {
+  color: #b4282d;
+}
+.h{
+    background-color: white;
+    padding: 10px;
+}
+.jg{
+    border-top: 1px solid rgb(235, 233, 233);
+    display: flex;
+    align-items: center;
+    margin:20px 0px;
+    padding-top: 30px;
+}
+.scdd{
+    width: 90px;
+    height: 35px;
+    border-radius:0 ;
+    font-size: 15px;
+    position: absolute;
+    right: 10px;
+    display: flex;
+    align-items: center;
+}
+.goods{
+    margin-top: 10px;
+    background-color: white;
+}
+.ztl{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 10px;
+}
+.zt{
+    color: rgb(207, 19, 19);
+}
+.spxq{
+    padding: 10px 10px;
+    border-top: 1px solid rgb(235, 233, 233);
+    display: flex;
+}
+.spxq image{
+    width: 100px;
+    height: 100px;
+}
+.xq{
+    width: 70%;
+    padding: 2px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.name-number{
+    display: flex;
+    justify-content: space-between;
+}
+
+.order-bottom{
+    position:absolute;
+    bottom: 0;
+    height: 40px;
+    padding: 10px 20px;
+    background-color: white;
+    width: 100%;
+}
+.order-express{
+    background-color: white;
+}
+.wlxx-1{
+    width: 170px;
+    height: 60px;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.name-phone{
+    display: flex;
+    justify-content: space-between;
+}
+.payWrapper{
+    border-top: 1px solid rgb(235, 233, 233);
+    padding: 10px;
+    background-color: white;
+}

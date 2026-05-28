@@ -1,0 +1,13 @@
+<view class="container">
+  <view class="pay-result">
+    <!-- 付款成功 -->
+    <view class="success">
+      
+    </view>
+    <!-- 付款失败 -->
+    <view class="error">
+     
+    </view>
+  </view>
+
+</view>

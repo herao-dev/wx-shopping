@@ -1,0 +1,91 @@
+page {
+  height: 100%;
+  min-height: 100%;
+  background: #f4f4f4;
+}
+
+.container {
+  background: #f4f4f4;
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  overflow: hidden;
+}
+.gg{
+    display: flex;
+    justify-content: space-between;
+    height: 30px;
+    align-items: center;
+    padding: 20px 0px;
+}
+
+.list{
+    
+}
+.active{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+.xuan{
+    position: absolute;
+}
+.active image{
+    height: 20px !important;
+    width: 20px !important;
+}
+.slk{
+    display: flex;
+    justify-content: right;
+    width: 160px;
+}
+.slk input{
+    border: 1px solid gray;
+    text-align: center;
+    padding: 3px 20px;
+}
+.slk view{
+    border: 1px solid gray;
+    padding: 3px 20px;
+    display: flex;
+    align-items: center;
+}
+.list-1{
+    display: flex;
+    background-color: white;
+    padding: 10px 0;
+    border-bottom: 1px solid rgb(211, 208, 208);
+    /* align-items: center; */
+}
+.list-1 image{
+    width: 100px;
+    height: 100px;
+}
+.xq{
+    width: 70%;
+    padding: 2px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.name-number{
+    display: flex;
+    justify-content: space-between;
+}
+.cart-bottom{
+    position: fixed;
+    bottom: 0;
+    background-color:white;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+.cart-bottom button{
+    width: 80px;
+    height: 50px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

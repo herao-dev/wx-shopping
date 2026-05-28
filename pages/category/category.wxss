@@ -1,0 +1,48 @@
+.container {
+  background: #f9f9f9;
+}
+.cate-nav{
+    display: flex;
+    background-color: white;
+}
+.cate{
+    display: flex;
+    background-color: white;
+    border-top: 1px solid grey;
+}
+.nav-1{
+    padding: 20px;
+    margin: 0 5px;
+    width: 100px;
+    text-align: center;
+}
+.active{
+    color: rgba(192, 192, 28, 0.726);
+    border-bottom:1px solid rgba(192, 192, 28, 0.726);
+}
+.cate-text{
+    padding-top: 30px;
+    text-align: center;
+}
+.cate-box{
+    margin-top: 10px;
+    padding-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;  
+}
+.cate-1{
+    margin: 2px;
+    padding: 20px 0px;
+    font-size: 20px;
+    width: 190px;
+    height: 250px;
+    text-align: center;
+    background-color: white;
+}
+.cate-1 image{
+    width: 170px;
+    height: 170px;
+}.cate-jg{
+    color: rgba(192, 192, 28, 0.726);
+}
